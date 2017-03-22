@@ -109,7 +109,6 @@ namespace Ovn23XML
 
         static void PrintContacts(XmlNode contacts)
         {
-            //XmlElement root = doc.DocumentElement;
             XmlNodeList contactList = contacts.ChildNodes;
             for (int i = 0; i < contactList.Count; i++)
             {
@@ -149,7 +148,7 @@ namespace Ovn23XML
                 {
                     FindNode(node.ChildNodes, name, type);
                 }
-                else if (node.InnerText.ToLower() == name.ToLower())
+                else if (node.InnerText == name.ToLower())
                 {
                     Console.WriteLine(node.Value);
                     if (type == 1)
