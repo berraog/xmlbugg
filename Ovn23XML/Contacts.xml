@@ -1,0 +1,46 @@
+<Contacts>
+  <Contact ssn="8704235913">
+    <Firstname>Björn</Firstname>
+    <Lastname>Green</Lastname>
+    <Addresses>
+      <Street>Sigtunagatan 3a</Street>
+      <Zip>12345</Zip>
+      <City>Stockholm</City>
+    </Addresses>
+    <Emails>
+      <Email>bjornogreen@gmail.com</Email>
+      <EmailType>Private</EmailType>
+    </Emails>
+    <PhoneNumbers>
+      <Phone>0730484542</Phone>
+      <PhoneType>Private</PhoneType>
+    </PhoneNumbers>
+  </Contact>
+  <Contact ssn="8704235939">
+    <Firstname>Martin</Firstname>
+    <Lastname>Green</Lastname>
+  </Contact>
+  <Contact ssn="8704241234">
+    <Firstname>Adam</Firstname>
+    <Lastname>Svensson</Lastname>
+    <Addresses>
+      <Street>Kårgatan 12</Street>
+      <Zip>54321</Zip>
+      <City>Örebro</City>
+    </Addresses>
+    <Emails>
+      <Email>taxa@gmail.com</Email>
+      <EmailType>Private</EmailType>
+    </Emails>
+    <PhoneNumbers>
+      <Phone>051510426</Phone>
+      <PhoneType>Home</PhoneType>
+    </PhoneNumbers>
+  </Contact>
+  <Contact ssn="9105107894">
+    <Firstname>Erik</Firstname>
+    <Lastname>Andersson</Lastname>
+  </Contact>
+  <Contact>
+  </Contact>
+</Contacts>
