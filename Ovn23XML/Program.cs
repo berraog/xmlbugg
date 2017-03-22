@@ -14,7 +14,7 @@ namespace Ovn23XML
         static void Main(string[] args)
         {
             doc = new XmlDocument();
-            doc.Load(@"C:\Projects\Ovn23XML\Ovn23XML\Contacts.xml");
+            doc.Load(@"C:\Users\Administrator\xmlbugg\Ovn23XML\Contacts.xml");
             XmlNode contacts = doc.LastChild;
             Menu(contacts, doc);
         }
@@ -36,10 +36,10 @@ namespace Ovn23XML
                 switch (input.ToLower())
                 {
                     case "p":
-                        AddContact(contacts, doc);
+                        PrintContacts(contacts);
                         break;
                     case "a":
-                        PrintContacts(contacts);
+                        AddContact(contacts, doc);
                         break;
                     case "r":
                         Console.Write("Input name: ");
@@ -89,7 +89,7 @@ namespace Ovn23XML
 
             Console.Write("Input last name: ");
             XmlElement newLastName = doc.CreateElement("Lastname");
-            XmlText lastName = doc.CreateTextNode("Herbertsson");
+            XmlText lastName = doc.CreateTextNode(Console.ReadLine());
 
             Console.Write("Input social security number (YYMMDDXXXX): ");
             string ssn = Console.ReadLine();
@@ -102,7 +102,7 @@ namespace Ovn23XML
 
             contacts.InsertAfter(newContact, contacts.LastChild);
 
-            doc.Save(@"C:\Projects\Ovn23XML\Ovn23XML\Contacts.xml");
+            doc.Save(@"C:\Users\Administrator\xmlbugg\Ovn23XML\Contacts.xml");
 
 
         }
@@ -148,13 +148,13 @@ namespace Ovn23XML
                 {
                     FindNode(node.ChildNodes, name, type);
                 }
-                else if (node.InnerText == name.ToLower())
+                else if (node.InnerText.ToLower() == name.ToLower())
                 {
                     Console.WriteLine(node.Value);
                     if (type == 1)
                     {
                         node.ParentNode.ParentNode.RemoveAll();
-                        doc.Save(@"C:\Projects\Ovn23XML\Ovn23XML\Contacts.xml");
+                        doc.Save(@"C:\Users\Administrator\xmlbugg\Ovn23XML\Contacts.xml");
                     }
                 }
             }
